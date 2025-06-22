@@ -183,7 +183,9 @@ set rime_cmake_flags=%common_cmake_flags%^
  -DBUILD_TEST=%build_test%^
  -DENABLE_LOGGING=%enable_logging%^
  -DCMAKE_PREFIX_PATH:PATH="%deps_install_prefix%"^
- -DCMAKE_INSTALL_PREFIX:PATH="%rime_install_prefix%"
+ -DCMAKE_INSTALL_PREFIX:PATH="%rime_install_prefix%"^
+ -DINSTALL_PRIVATE_HEADERS=ON^
+ -DENABLE_EXTERNAL_PLUGINS=ON
 
 echo on
 call cmake . -B%build_dir% %rime_cmake_flags%
